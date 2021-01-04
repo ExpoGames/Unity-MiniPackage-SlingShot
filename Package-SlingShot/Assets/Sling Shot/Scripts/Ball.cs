@@ -12,6 +12,6 @@ public class Ball : MonoBehaviour
 
 	public void Push(Vector3 force) {
 		_rb.isKinematic = false;
-		_rb.AddForce(force, ForceMode.Impulse);
+		_rb.AddForce(_rb.mass * force, ForceMode.Impulse);
 	}
 }
